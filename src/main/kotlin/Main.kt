@@ -6,13 +6,22 @@ class Pila<T>() {
 
     fun push(element: T) = listaPila.add(element)
 
-    fun pop(element: T) =listaPila.remove(element)
+    fun pop() =listaPila.removeAt(listaPila.lastIndex)
 
     fun vacia():Boolean =  listaPila.lastIndex == -1
 
-    fun reverse(mutableIterator: MutableIterator<T>) {
-        var mutableIterator = listaPila.iterator()
-        var alreves = reverse(mutableIterator)
+    fun reverse(mutableIterator: List<T>) {
+        var iterator = mutableIterator.iterator()
+        var pila: Pila<T> = Pila()
+        var alreves = mutableListOf<T>()
+        while( iterator.hasNext()
+
+        ){
+            pila.push(iterator.next())
+        }
+        while (!pila.vacia()){
+            alreves.add(pila.pop())
+        }
         if (!listaPila.equals(alreves)) {
             println("error")
         } else {
