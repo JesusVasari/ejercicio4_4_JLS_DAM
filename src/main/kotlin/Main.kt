@@ -15,30 +15,22 @@ class Pila<T>() {
         var pila: Pila<T> = Pila()
         var alreves = mutableListOf<T>()
         while( iterator.hasNext()
-
         ){
             pila.push(iterator.next())
         }
         while (!pila.vacia()){
             alreves.add(pila.pop())
         }
-        if (!listaPila.equals(alreves)) {
-            println("error")
-        } else {
-            println("correcto")
-        }
-        println(alreves)
     }
 }
 
-    fun main(args: Array<String>) {
+    fun main() {
 
-        val pilaEnteros = Pila<Int>()
+
+        val pilaEnteros: Pila<Int> = Pila()
         pilaEnteros.push(1)
         pilaEnteros.push(3)
         pilaEnteros.push(2)
 
         println(pilaEnteros)
-
-
     }
